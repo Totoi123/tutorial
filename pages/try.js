@@ -1,18 +1,17 @@
 import Navbar from "../Components/Navbar";
 import data from "../utils/data";
 import Image from "next/image";
-
-const Home = () => {
+const Try = () => {
   return (
     <div>
       <Navbar />
       <div className="container">
         <div className="columns">
           {data.products.map((product) => (
-            <div className="column is-2" key={product.name}>
+            <div className="column is-4" key={product.name}>
               <div className="card">
                 <div className="card-image">
-                  <figure className="image is-1by1">
+                  <figure className="image is-square">
                     <Image
                       src={product.image}
                       alt={product.name}
@@ -20,8 +19,8 @@ const Home = () => {
                     />
                   </figure>
                   <div className="card-content">
-                    <p className="title is-size-4">{product.name}</p>
-                    <p className="subtitle is-size-4">{product.price}</p>
+                    <h1 className="title is-size-4">{product.name}</h1>
+                    <h1 className="subtitle is-size-4">{product.price}</h1>
                   </div>
                 </div>
               </div>
@@ -33,4 +32,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Try;
